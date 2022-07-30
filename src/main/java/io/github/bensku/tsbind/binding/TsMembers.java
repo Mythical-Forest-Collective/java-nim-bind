@@ -86,7 +86,7 @@ public class TsMembers {
 		if (node.isStatic) {
 			out.print("static ");
 		}
-		out.print("get %s(): %s;", node.name, node.returnType);
+		out.print("%s(): %s;", node.originalName(), node.returnType);
 	};
 	
 	public static final TsGenerator<Setter> SETTER = (node, out) -> {
@@ -95,6 +95,6 @@ public class TsMembers {
 		if (node.isStatic) {
 			out.print("static ");
 		}
-		out.print("set %s(%s);", node.name, node.params.get(0));
+		out.print("%s(%s);", node.originalName(), node.params.get(0));
 	};
 }
