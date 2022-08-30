@@ -1,16 +1,13 @@
-# TypeScript binding generator for Java
-java-ts-bind takes your Java source code and generates TypeScript types for it.
-It is meant to be used with [GraalJS](https://github.com/oracle/graaljs)
-to provide a strongly-typed scripting environment.
+# Nim binding generator for Java
+java-nim-bind takes source code and wraps it in a way that allows the library to mostly work as if it was written in Nim (implementation yet to be done/decided)!
+It is meant to be used with my project, [CodeGeLib](https://github.com/Mythical-Forest-Collective/CodeGenLib)
+to provide a convenient, idiomatic way to generate Java code from Nim!
 
-This project was created for [CraftJS](https://github.com/Valtakausi/craftjs),
-a Bukkit plugin for writing plugins in JavaScript. It is based on earlier work
-by [Ap3teus](https://github.com/Ap3teus).
+This project is a fork of [java-ts-bind](https://github.com/MercerK/java-ts-bind), which is a fork of [bensku/java-ts-bind](https://github.com/bensku/java-ts-bind), which has the goal of generating TypeScript types for Java libraries for use with GraalJS!
 
-No releases are currently provided. If you need it, compile it yourself
-(or open a bug in the issue tracker).
+## Unmodified parts of the README.md
 
-## Usage
+### Usage
 This is a command-line application.
 
 * --format: output format
@@ -35,7 +32,7 @@ This is a command-line application.
   * Handy when you already have package.json for publishing
 * --index: generate index.d.ts that references other generated files
 
-## Limitations
+### Limitations
 java-ts-bind does not necessarily generate *valid* TypeScript declarations.
 The results are good enough to allow strongly-typed scripts, but it is
 recommended that `noLibCheck` is used.
